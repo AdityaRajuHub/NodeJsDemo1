@@ -1,0 +1,16 @@
+
+<%include partials/header %>
+
+	<h1>Hello <%= user %> from index file!</h1>
+	<h2>Your Contacts:</h2>
+	<ul>
+		<% contacts.forEach(function(contact){ %>
+			<li><%=contact.phone%></li>
+		<% }) %>
+	</ul>
+	<br>
+	<form method="POST" action="/contact/add"
+		<span>Add Contact: </span><pre><input type="text" name="contact" value=""/> <input type="submit" value="Add"/></pre>
+	</form>
+
+<%include partials/footer %>
